@@ -52,7 +52,10 @@ class ResultScreen extends React.Component {
         onLoadStartAsync={this.handleLoadStart}
         onReadyAsync={this.handleReady}
       >
-        <ResultList data={this.state.result} />
+        <ResultList
+          image={this.props.navigation.state.params.image}
+          data={this.state.result}
+        />
       </LoadingContainer>
     );
   }

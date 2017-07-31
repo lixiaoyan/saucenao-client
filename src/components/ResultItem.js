@@ -54,16 +54,19 @@ const styles = StyleSheet.create({
   },
 
   typeText: {
+    fontFamily: "sans-serif-condensed",
     fontSize: 10,
     color: "#fff",
   },
 
   id: {
+    fontFamily: "sans-serif-condensed",
     fontSize: 10,
     color: "rgba(0, 0, 0, 0.4)",
   },
 
   title: {
+    fontFamily: "sans-serif-condensed",
     fontSize: 16,
   },
 
@@ -72,6 +75,7 @@ const styles = StyleSheet.create({
   },
 
   authorText: {
+    fontFamily: "sans-serif-condensed",
     fontSize: 10,
     color: "rgba(0, 0, 0, 0.4)",
   },

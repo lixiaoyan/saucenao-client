@@ -1,0 +1,17 @@
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncA type="linear" slope="0.2" />
+      </feComponentTransfer>
+      <feOffset dx="0" dy="1" />
+      <feGaussianBlur stdDeviation="2" out="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="50%" y="50%" transform="translate(-40, -40)" width="80" height="80" rx="4" ry="4" fill="#3f51b5" filter="url(#shadow)" />
+  <text x="50%" y="50%" font-family="&quot;Economica Next 02&quot;" font-size="64" text-anchor="middle" dominant-baseline="middle" transform="translate(0, 8)" fill="#fff">SN</text>
+</svg>

@@ -8,6 +8,11 @@ import ResultList from "../components/ResultList";
 class ResultScreen extends React.Component {
   static navigationOptions = {
     title: "Result",
+    headerTintColor: "#fff",
+    headerStyle: {
+      backgroundColor: "#3f51b5",
+    },
+    headerPressColorAndroid: "rgba(255, 255, 255, 0.2)",
   };
 
   static propTypes = {

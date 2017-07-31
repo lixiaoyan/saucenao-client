@@ -3,9 +3,11 @@
     "sdkVersion": "19.0.0",
     "slug": "saucenao-client",
     "name": "SauceNAO",
-    "orientation": "portrait",
+    "icon": "./icon.png",
     "primaryColor": "#3f51b5",
+    "orientation": "portrait",
     "loading": {
+      "icon": "./logo.png",
       "backgroundColor": "#3f51b5",
       "hideExponentText": true
     }

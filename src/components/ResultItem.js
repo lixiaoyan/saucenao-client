@@ -40,8 +40,14 @@ const styles = StyleSheet.create({
 
   meta: {
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 4,
+  },
+
+  metaSide: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 
   type: {
@@ -60,6 +66,12 @@ const styles = StyleSheet.create({
   },
 
   id: {
+    fontFamily: "sans-serif-condensed",
+    fontSize: 10,
+    color: "rgba(0, 0, 0, 0.4)",
+  },
+
+  similarity: {
     fontFamily: "sans-serif-condensed",
     fontSize: 10,
     color: "rgba(0, 0, 0, 0.4)",
@@ -107,14 +119,21 @@ class ResultItem extends React.Component {
             </View>
             <View style={styles.content}>
               <View style={styles.meta}>
-                <View style={styles.type}>
-                  <Text style={styles.typeText}>
-                    {data.type.toUpperCase()}
+                <View style={styles.metaSide}>
+                  <View style={styles.type}>
+                    <Text style={styles.typeText}>
+                      {data.type.toUpperCase()}
+                    </Text>
+                  </View>
+                  <Text style={styles.id}>
+                    {data.id}
                   </Text>
                 </View>
-                <Text style={styles.id}>
-                  {data.id}
-                </Text>
+                <View style={styles.metaSide}>
+                  <Text style={styles.similarity}>
+                    {data.similarity}%
+                  </Text>
+                </View>
               </View>
               <Text style={styles.title} numberOfLines={1}>
                 {data.title || "·"}

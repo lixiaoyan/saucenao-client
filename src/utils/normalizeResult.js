@@ -57,7 +57,8 @@ const normalizeResult = result => {
     const thumbnail = item.header.thumbnail;
     const author = getAuthor(item, type);
     const url = getUrl(item, type, id, author);
-    return { type, id, title, thumbnail, author, url };
+    const similarity = item.header.similarity;
+    return { type, id, title, thumbnail, author, url, similarity };
   });
 };
 

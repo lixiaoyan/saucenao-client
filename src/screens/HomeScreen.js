@@ -53,10 +53,7 @@ class HomeScreen extends React.Component {
   };
 
   handlePress = async () => {
-    const result = await ImagePicker.launchImageLibraryAsync({
-      quality: 0.8,
-      exif: false,
-    });
+    const result = await ImagePicker.launchImageLibraryAsync();
     if (result.cancelled) {
       return;
     }

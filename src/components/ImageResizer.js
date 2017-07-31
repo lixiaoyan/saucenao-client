@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 0,
     top: 0,
+    overflow: "hidden",
     width: 0,
     height: 0,
   },
@@ -73,7 +74,7 @@ class ImageResizer extends React.Component {
   render() {
     const image = this.state.image;
     return (
-      <View style={styles.container}>
+      <View style={styles.container} collapsable={false}>
         {image &&
           <Image
             ref={image => {

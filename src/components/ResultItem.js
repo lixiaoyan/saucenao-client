@@ -35,14 +35,14 @@ const styles = StyleSheet.create({
   meta: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 8,
+    marginBottom: 4,
   },
 
   type: {
     justifyContent: "center",
-    height: 20,
-    marginRight: 8,
-    paddingHorizontal: 8,
+    height: 16,
+    marginRight: 4,
+    paddingHorizontal: 4,
     borderRadius: 2,
     backgroundColor: "#e91e63",
   },
@@ -59,6 +59,15 @@ const styles = StyleSheet.create({
 
   title: {
     fontSize: 16,
+  },
+
+  author: {
+    marginTop: 4,
+  },
+
+  authorText: {
+    fontSize: 10,
+    color: "rgba(0, 0, 0, 0.4)",
   },
 });
 
@@ -95,8 +104,13 @@ class ResultItem extends React.Component {
                 </Text>
               </View>
               <Text style={styles.title} numberOfLines={1}>
-                {data.title}
+                {data.title || "·"}
               </Text>
+              <View style={styles.author}>
+                <Text style={styles.authorText}>
+                  {data.author.name}
+                </Text>
+              </View>
             </View>
           </View>
         </Touchable>

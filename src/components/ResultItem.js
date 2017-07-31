@@ -8,22 +8,28 @@ const styles = StyleSheet.create({
   container: {
     elevation: 2,
     margin: 4,
+    borderRadius: 2,
     backgroundColor: "#fff",
   },
 
   layout: {
     flexDirection: "row",
+    borderRadius: 2,
   },
 
   thumbnail: {
     borderRightWidth: 1,
     borderRightColor: "rgba(0, 0, 0, 0.1)",
+    borderTopLeftRadius: 2,
+    borderBottomLeftRadius: 2,
+    backgroundColor: "#f5f5f5",
   },
 
   thumbnailImage: {
     width: 96,
     height: 96,
-    backgroundColor: "#f5f5f5",
+    borderTopLeftRadius: 2,
+    borderBottomLeftRadius: 2,
   },
 
   content: {
@@ -84,7 +90,10 @@ class ResultItem extends React.Component {
     const data = this.props.data;
     return (
       <View style={styles.container}>
-        <Touchable onPress={this.handlePress}>
+        <Touchable
+          background={Touchable.SelectableBackgroundBorderless()}
+          onPress={this.handlePress}
+        >
           <View style={styles.layout} pointerEvents="box-only">
             <View style={styles.thumbnail}>
               <Image

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StyleSheet, View, Button } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { ImagePicker } from "expo";
+import Touchable from "react-native-platform-touchable";
 
 const styles = StyleSheet.create({
   container: {
@@ -11,11 +12,22 @@ const styles = StyleSheet.create({
   },
 
   button: {
+    elevation: 2,
+    width: 160,
+    height: 80,
     borderRadius: 2,
     backgroundColor: "#e91e63",
   },
 
+  buttonLayout: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
   buttonText: {
+    fontFamily: "sans-serif-condensed",
+    fontSize: 16,
     color: "#fff",
   },
 });
@@ -44,7 +56,15 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button title="Select Image" onPress={this.handlePress} />
+        <View style={styles.button}>
+          <Touchable
+            style={styles.buttonLayout}
+            background={Touchable.SelectableBackgroundBorderless()}
+            onPress={this.handlePress}
+          >
+            <Text style={styles.buttonText}>Select Image</Text>
+          </Touchable>
+        </View>
       </View>
     );
   }

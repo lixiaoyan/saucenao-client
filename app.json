@@ -14,7 +14,8 @@
     },
     "android": {
       "package": "moe.ptr.saucenao.client",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions": ["READ_EXTERNAL_STORAGE"]
     }
   }
 }

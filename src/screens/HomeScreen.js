@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: "Home",
     header: null,
   };
 

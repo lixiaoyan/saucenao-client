@@ -4,8 +4,8 @@
       <feComponentTransfer in="SourceAlpha">
         <feFuncA type="linear" slope="0.2" />
       </feComponentTransfer>
-      <feOffset dx="0" dy="1" />
-      <feGaussianBlur stdDeviation="2" out="shadow" />
+      <feOffset dx="0" dy="2" />
+      <feGaussianBlur stdDeviation="4" out="shadow" />
       <feMerge>
         <feMergeNode in="shadow" />
         <feMergeNode in="SourceGraphic" />

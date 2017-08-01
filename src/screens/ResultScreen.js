@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
 
 class ResultScreen extends React.Component {
   static navigationOptions = {
-    title: "Result",
     headerTintColor: "#fff",
     headerStyle: {
       backgroundColor: "#3f51b5",

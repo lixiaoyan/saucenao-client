@@ -14,7 +14,7 @@
     },
     "android": {
       "package": "moe.ptr.saucenao.client",
-      "versionCode": 0
+      "versionCode": 1
     }
   }
 }

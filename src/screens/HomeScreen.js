@@ -67,10 +67,9 @@ class HomeScreen extends React.Component {
 
   handlePress = async () => {
     const result = await ImagePicker.launchImageLibraryAsync();
-    if (result.cancelled) {
-      return;
+    if (!result.cancelled) {
+      this.props.navigation.navigate("Result", { image: result });
     }
-    this.props.navigation.navigate("Result", { image: result });
   };
 
   render() {

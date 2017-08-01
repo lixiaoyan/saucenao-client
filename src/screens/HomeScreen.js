@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, View, Text, Image } from "react-native";
-import { ImagePicker } from "expo";
+import { Asset, AppLoading, ImagePicker } from "expo";
 import Touchable from "react-native-platform-touchable";
 
 const styles = StyleSheet.create({
@@ -51,6 +51,20 @@ class HomeScreen extends React.Component {
     navigation: PropTypes.any,
   };
 
+  state = {
+    ready: false,
+  };
+
+  async componentDidMount() {
+    await this.loadAssets();
+    this.setState({ ready: true });
+  }
+
+  async loadAssets() {
+    const assets = [require("../../assets/logo.png")];
+    await Promise.all(assets.map(asset => Asset.loadAsync(asset)));
+  }
+
   handlePress = async () => {
     const result = await ImagePicker.launchImageLibraryAsync();
     if (result.cancelled) {
@@ -60,11 +74,15 @@ class HomeScreen extends React.Component {
   };
 
   render() {
+    if (!this.state.ready) {
+      return <AppLoading />;
+    }
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
           <Image
             style={styles.logoImage}
+            fadeDuration={0}
             source={require("../../assets/logo.png")}
           />
         </View>

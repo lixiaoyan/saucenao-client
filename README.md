@@ -2,6 +2,9 @@
 
 Unofficial Android client for SauceNAO.
 
+![](./screenshots/1.png)
+![](./screenshots/2.png)
+
 ## Development
 
 ``` shell

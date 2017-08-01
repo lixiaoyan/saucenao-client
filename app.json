@@ -13,7 +13,7 @@
       "hideExponentText": true
     },
     "android": {
-      "package": "moe.ptr.saucenao-client",
+      "package": "moe.ptr.saucenao.client",
       "versionCode": 0
     }
   }

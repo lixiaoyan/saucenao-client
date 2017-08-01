@@ -4,8 +4,8 @@
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "build-assets": "npm-run-all build-assets:*",
-    "build-assets:icon": "inkscape ./icon.svg -d 384 -e ./icon.png",
-    "build-assets:logo": "inkscape ./logo.svg -d 384 -e ./logo.png",
+    "build-assets:icon": "inkscape ./assets/icon.svg -d 384 -e ./assets/icon.png",
+    "build-assets:logo": "inkscape ./assets/logo.svg -d 384 -e ./assets/logo.png",
     "start": "react-native-scripts start",
     "lint": "eslint .",
     "prettier": "eslint --fix .",

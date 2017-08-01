@@ -63,7 +63,10 @@ class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
-          <Image style={styles.logoImage} source={require("../../logo.png")} />
+          <Image
+            style={styles.logoImage}
+            source={require("../../assets/logo.png")}
+          />
         </View>
         <View style={styles.button}>
           <Touchable

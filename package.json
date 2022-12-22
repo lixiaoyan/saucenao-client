@@ -34,6 +34,6 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
     "prettier": "^1.5.3",
-    "react-native-scripts": "^1.0.0"
+    "react-native-scripts": "^1.14.1"
   }
 }
